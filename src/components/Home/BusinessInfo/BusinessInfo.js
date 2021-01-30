@@ -1,25 +1,25 @@
 import React from 'react';
 import InfoCard from '../InfoCard/InfoCard';
 // import { faClock,faMapMarker,faPhone } from '@fortawesome/free-solid-svg-icons'
-
+import { FaClock, FaMapMarkerAlt,FaPhoneAlt} from "react-icons/fa";
 const infoData=[
     {
         title:'Opening Hours',
         description:'we are open 7 days',
-        // icon:faClock,
+        icon: FaClock,
         background:'primary'
     },
 
     {
         title:'Visit our location',
         description:'Brooklyn,NY 1078,United States',
-        // icon:faMapMarker,
+         icon:FaMapMarkerAlt,
         background:'dark'
     },
     {
         title:'Contact us now',
         description:'+0000345586',
-        // icon:faPhone,
+        icon:FaPhoneAlt,
         background:'primary'
     }
 ]

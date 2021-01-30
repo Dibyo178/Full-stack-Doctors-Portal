@@ -7,6 +7,7 @@ import Services from '../Services/Services';
 import Blog from '../Blog/Blog';
 import Doctors from '../Doctors/Doctors';
 import Contact from '../Contact/Contact';
+import Footer from '../../Shared/Footer/Footer';
 
 
 
@@ -14,15 +15,16 @@ import Contact from '../Contact/Contact';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
-            <Services></Services>
-            <FeatureServices></FeatureServices>
-            <MakesAppointment></MakesAppointment>
-            <Testimonials></Testimonials>
-            <Blog></Blog>
-            <Doctors></Doctors>
-            <Contact></Contact>
-          
+            <Header/>
+            <Services/>
+            <FeatureServices/>
+            <MakesAppointment/>
+            <Testimonials/>
+            <Blog/>
+            <Doctors/>
+            <Contact/>
+            <Footer/>
+            
         </div>
     );
 };
