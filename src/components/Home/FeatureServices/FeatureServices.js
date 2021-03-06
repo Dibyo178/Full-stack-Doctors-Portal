@@ -19,7 +19,7 @@ const FeatureServices = () => {
                             sapiente rerum accusamus aut nulla praesentium! Neque autem animi, voluptatem magnam nesciunt
                             officia nemo nam, delectus minima velit beatae iste praesentium ad repudiandae, similique excepturi sapiente.
                     </p>
-                        <button className="btn btn-primary">Learn More</button>
+                        {/* <button className="btn btn-primary">Learn More</button> */}
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import chair from "../../../images/chair.png"
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './AppointmentHeader.css';
-
+import './Calender.css'
 const AppointmentHeader = ({handleDateChange}) => {
    
     return (

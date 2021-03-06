@@ -1,7 +1,7 @@
 import React from 'react';
-import wilson from '../../../images/wilson.png';
-import ema from '../../../images/ema.png';
-import aliza from '../../../images/aliza.png';
+import wilson from '../../images/wilson.png';
+import ema from '../../images/ema.png';
+import aliza from '../../images/aliza.png';
 import Testimonial from '../Testimonial/Testimonial';
 import './Testimonials.css'
 
@@ -29,7 +29,7 @@ const testimonialData = [
 
 const Testimonials = () => {
     return (
-        <section className="testimonials my-5 py-5">
+        <section className="testimonials my-5 py-5" id='testimonial'>
         <div className="container">
             <div className="section-header">
                 <h5 className="text-primary text-uppercase">Testimonial</h5>
