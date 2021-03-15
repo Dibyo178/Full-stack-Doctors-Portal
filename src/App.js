@@ -19,6 +19,11 @@ import Testimonial from './components/Testimonials/Testimonials';
 import About from './components/Home/Services/Services';
 import Blog from './components/Home/Blog/Blog';
 import Contact from './components/Home/Contact/Contact';
+import Doctor from './components/Home/Doctors/Doctors'
+import AddDoctor from './components/AddDoctor/AddDoctor'
+
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 
 export const UserContext = createContext();
 export const AppointmentContext = createContext();
@@ -52,6 +57,14 @@ function App() {
           < About/>
           </Route>
            
+          <Route path="/doctor">
+          < Doctor/>
+          </Route>
+
+          <Route path="/addDoctor">
+          < AddDoctor/>
+          </Route>
+
           <Route path="/contact">
           < Contact/>
           </Route>
@@ -59,7 +72,8 @@ function App() {
           <Route path="/blog">
           < Blog/>
           </Route>
-
+            
+       
           <Route path="/allPatients">
           <AllPatients/>
           </Route>
@@ -74,12 +88,13 @@ function App() {
           </Route>
           <PrivateRoute path="/dashboard">
           <MainDashboard/>
-          </PrivateRoute>
+          </PrivateRoute >
           <Route path='/login'>
             <Login/>
           </Route>
         </Switch>
       </Router>
+      <MessengerCustomerChat pageId="106631868170344" appId="3860328510677348" />
       </UserContext.Provider>
   );
 }

@@ -14,8 +14,19 @@ const Sidebar = () => {
     
 
     
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-    // const [, , isDoctor, setIsDoctor] = useContext(AppointmentContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    const [isDoctor, setIsDoctor] = useState(false);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/isDoctor', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ email: loggedInUser.email })
+        })
+            .then(res => res.json())
+            .then(data => setIsDoctor(data));
+    }, [])
 
     const logOutHandeler = () => {
         sessionStorage.removeItem('name');
@@ -25,23 +36,37 @@ const Sidebar = () => {
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-2 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
-                {
-                    // isDoctor && 
-                    <li>
-                        <Link style={{textDecoration:'none'}} to="/dboard" className="text-white">
-                            <FaGripHorizontal />Dashboard
-                        </Link>
-                    </li>
-                }
-                <li>
+            <div>
+            <li>
+          <Link style={{textDecoration:'none'}} to="/" className="text-white" >
+             <HomeIcon/>Home
+           </Link>
+         </li> 
+         <li>
                     <Link style={{textDecoration:'none'}} to="/appointmentList" className="text-white">
                         <FaCalendarCheck />Appointment
                     </Link>
                     
                 </li>
-                {
-                    // isDoctor && 
-                    <div>
+            </div>
+                {/* {
+                    isDoctor && 
+                    <li>
+                        <Link style={{textDecoration:'none'}} to="/dboard" className="text-white">
+                            <FaGripHorizontal />Dashboard
+                        </Link>
+                    </li>
+                    
+                   
+                } */}
+                 {isDoctor && <div>
+                    <li>
+                        <Link style={{textDecoration:'none'}} to="/dboard" className="text-white">
+                            <FaGripHorizontal />Dashboard
+                        </Link>
+                    </li>
+                    
+                  
                         <li>
                             <Link style={{textDecoration:'none'}} to="/allPatients" className="text-white">
                                 <FaUsers />Patients
@@ -54,19 +79,13 @@ const Sidebar = () => {
                         </li>
                         <li>
                             <Link style={{textDecoration:'none'}} to="/addDoctor" className="text-white" >
-                                <FaUserCheck />Admin
+                                <FaUserCheck />Add Doctor
                             </Link>
                         </li>
-                    </div>
-                }
+                        
+                        </div>}
             </ul>
-            <div>
-            <li>
-          <Link style={{textDecoration:'none'}} to="/" className="text-white" >
-             <HomeIcon/>Home
-           </Link>
-         </li> 
-            </div>
+          
             <div>
                 <li onClick={logOutHandeler}>
                     <Link style={{textDecoration:'none'}}  to="/" className="text-white"><FaSignOutAlt />Logout</Link>
