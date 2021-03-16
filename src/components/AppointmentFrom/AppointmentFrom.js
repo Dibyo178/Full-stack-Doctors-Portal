@@ -58,7 +58,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn,visitingHour, 
         // data.visitingHour=visitingHour;
         data.created = new Date()
 
-        fetch('http://localhost:5000/addAppointment', {
+        fetch('https://immense-mountain-96969.herokuapp.com/addAppointment', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

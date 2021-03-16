@@ -26,7 +26,7 @@ import doctor from '../../../images/doctor.png'
 const Doctors = () => {
     const [doctors, setDoctors] = useState([])
     useEffect( () => {
-        fetch('http://localhost:5000/doctors')
+        fetch('https://immense-mountain-96969.herokuapp.com/doctors')
         .then(res => res.json())
         .then(data =>{
             setDoctors(data)

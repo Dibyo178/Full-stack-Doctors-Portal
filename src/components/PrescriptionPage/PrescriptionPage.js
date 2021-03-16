@@ -12,7 +12,7 @@ const DashBoard = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(()=>{
-        fetch('http://localhost:5000/allAppointments')
+        fetch('https://immense-mountain-96969.herokuapp.com/allAppointments')
         .then(res => res.json())
         .then(data => {
             setIsLoading(false)

@@ -10,7 +10,7 @@ const TableRow = ({appointment}) => {
         const update = e.target.value;
         setStatus(update);
         console.log(update);
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://immense-mountain-96969.herokuapp.com/updateStatus/${id}`, {
             method:"PATCH",
             headers: {
                 'Content-Type': 'application/json'

@@ -12,20 +12,20 @@ const AllAppRow = (props) => {
     const [prescription, setPrescription] = useState(props.data.prescription)
     
     
-    const handlePrescription = (e) => {
-        console.log(prescription)
-        fetch('https://warm-journey-10486.herokuapp.com/updatePrescription', {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                id: props.data._id,
-                prescription
-            })
-        }).then(res => res.json())
-        setModalIsOpen(false)
-    }
+    // const handlePrescription = (e) => {
+    //     console.log(prescription)
+    //     fetch('https://warm-journey-10486.herokuapp.com/updatePrescription', {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({
+    //             id: props.data._id,
+    //             prescription
+    //         })
+    //     }).then(res => res.json())
+    //     setModalIsOpen(false)
+    // }
    
        
 
@@ -58,7 +58,7 @@ const AllAppRow = (props) => {
                 }} 
             >   
                 <h5 className='text-info'>Prescription</h5>
-                <form onSubmit={handlePrescription}>
+                {/* <form onSubmit={handlePrescription}>
                     <textarea 
                         name="prescription"
                         value={prescription}
@@ -67,7 +67,7 @@ const AllAppRow = (props) => {
                         required/>
                     <br/>
                     <input className='form-control btn btn-info' type="submit" value="Enter"/>
-                </form>
+                </form> */}
             </Modal>
         </TableRow>
     );

@@ -19,7 +19,7 @@ const Sidebar = () => {
     const [isDoctor, setIsDoctor] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/isDoctor', {
+        fetch('https://immense-mountain-96969.herokuapp.com/isDoctor', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -28,11 +28,11 @@ const Sidebar = () => {
             .then(data => setIsDoctor(data));
     }, [])
 
-    const logOutHandeler = () => {
-        sessionStorage.removeItem('name');
-        sessionStorage.removeItem('email');
-        localStorage.removeItem('response');
-    }
+    // const logOutHandeler = () => {
+    //     sessionStorage.removeItem('name');
+    //     sessionStorage.removeItem('email');
+    //     localStorage.removeItem('response');
+    // }
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-2 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
@@ -87,7 +87,7 @@ const Sidebar = () => {
             </ul>
           
             <div>
-                <li onClick={logOutHandeler}>
+                <li>
                     <Link style={{textDecoration:'none'}}  to="/" className="text-white"><FaSignOutAlt />Logout</Link>
                 </li>
             </div>
