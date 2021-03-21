@@ -40,10 +40,12 @@ const TableRow = ({appointment}) => {
                                 /> */}
                         
                         <select className='action_status' onChange={handleStatusChange} name={appointment._id} >
-                            <option className='status1' value={status} selected>{status}</option>
+                            <option  className='status1' value={status} selected>{status}</option>
                             <option className='status2'  value="Not Visited">Not Visited</option>
                             <option className='status3' value='Visited'>Visited</option>
+                             
                         </select>
+                        
                         </td>
                     </tr>
         

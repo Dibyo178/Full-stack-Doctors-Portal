@@ -14,6 +14,7 @@ const Doctor = ({ doctor }) => {
                     <img style={{height: '200px'}} className="img-fluid mb-3" src={`http://localhost:5000/${doctor.img}`} alt=""/>
         }
             <h4 style={{color:'brown'}}>{doctor.name}</h4>
+            <strong> <p style={{color:'#0fcfec'}}> {doctor.Specialist}</p></strong>
            <strong> <p> {doctor.Qualification}</p></strong>
             <p> {doctor.email}</p>
             <p> {doctor.phone}</p>

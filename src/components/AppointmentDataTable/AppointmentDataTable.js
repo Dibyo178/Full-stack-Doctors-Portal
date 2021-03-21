@@ -24,6 +24,7 @@ const AppointmentDataTable = ({appointments}) => {
                         <td>{index + 1}</td>
                         <td>{appointment.name}</td>
                         <td>{appointment.gender}</td>
+                        {/* <td>{appointment.doctor}</td> */}
                         <td>{appointment.age}</td>
                         <td>{appointment.weight}KG</td>
                         <td>{appointment.phone}</td>

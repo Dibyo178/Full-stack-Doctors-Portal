@@ -22,6 +22,7 @@ const AddDoctor = () => {
         formData.append('email', info.email)
         formData.append('phone', info.phone)
         formData.append('Qualification', info.Qualification)
+        formData.append('Specialist', info.Specialist)
         
         fetch('https://immense-mountain-96969.herokuapp.com/addADoctor', {
             method: 'POST',
@@ -61,6 +62,20 @@ const AddDoctor = () => {
                     <div className="form-group">
                         <label ><h6>Qualification</h6></label>
                         <input onBlur={handelBlur} type="text" name="Qualification" className="form-control"  placeholder="Enter qualification" />
+                    </div>
+                    <div className="form-group">
+                    <label ><h6>Specialist</h6></label>
+                        <input onBlur={handelBlur} type="text" name="Specialist" className="form-control"  placeholder="Enter Specialist" />
+                             {/* <label ><h6>Specialist</h6></label>
+                            <select  onBlur={handelBlur} className="form-control" name="Specialist" >
+                                <option disabled={true} value="Not set">Select Specialist</option>
+                                <option value="Teeth Orthodontics">Teeth Orthodontics</option>
+                                <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                                <option value="Teeth Cleaning">Teeth Cleaning</option>
+                                <option value="Teeth Orthodontics">Cavity Protection</option>
+                                <option value="Cosmetic Dentistry">Teeth Filing</option>
+                                <option value="Teeth Cleaning">Dental Surgery</option>
+                            </select> */}
                     </div>
                     <div className="form-group">
                         <label ><h6>Upload image</h6></label>

@@ -117,9 +117,11 @@ const AllAppTable = (props) => {
                     <TableRow>
                         <TableCell><b>Date</b></TableCell>
                         <TableCell align="center"><b>Email</b></TableCell>
-                        <TableCell align="right"><b>Name</b></TableCell>
-                        <TableCell align="right"><b>Contact</b></TableCell>
-                        <TableCell align="right"><b>Status</b></TableCell>
+                        <TableCell align="center"><b>Doctor</b></TableCell>
+                        <TableCell align="center"><b>Treatment</b></TableCell>
+                        <TableCell align="center"><b>Name</b></TableCell>
+                        <TableCell align="center"><b>Contact</b></TableCell>
+                        <TableCell align="center"><b>Status</b></TableCell>
                     </TableRow>
             </TableHead>
           <TableBody>

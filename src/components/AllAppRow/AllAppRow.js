@@ -35,6 +35,8 @@ const AllAppRow = (props) => {
              {props.data.date}
             </TableCell>
             <TableCell align="right">{props.data.email}</TableCell>
+            <TableCell align="right">{props.data.doctor}</TableCell>
+            <TableCell align="right">{props.data.service}</TableCell>
             <TableCell align="right">{props.data.name}</TableCell>
             <TableCell align="right">{props.data.phone}</TableCell>
             <TableCell align="right">
